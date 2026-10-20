@@ -62,6 +62,147 @@ footer{text-align:center;padding:25px;border-top:1px solid #493c28;color:#aeb5bf
   box-shadow: 0 0 25px rgba(200, 169, 110, 0.25);
   margin-bottom: 20px;
 }
+  
+/* Mobile responsiveness improvements */
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-wrap: break-word;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+header,
+nav,
+.hero,
+.cards,
+.buttons {
+  min-width: 0;
+}
+
+nav {
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.cards {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+}
+
+.card {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+button,
+.button,
+nav a {
+  min-height: 44px;
+}
+
+@media (max-width: 600px) {
+  header {
+    padding: 16px 5%;
+    gap: 12px;
+  }
+
+  nav {
+    width: 100%;
+    gap: 8px 14px;
+  }
+
+  .hero {
+    grid-template-columns: minmax(0, 1fr);
+    padding: 32px 5%;
+    gap: 24px;
+  }
+
+  section {
+    padding: 32px 5%;
+  }
+
+  h1 {
+    font-size: clamp(30px, 9vw, 42px);
+    line-height: 1.25;
+  }
+
+  h2 {
+    font-size: clamp(23px, 6vw, 30px);
+  }
+
+.profile-photo {
+  width: 170px;
+  height: 170px;
+  max-width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+  .buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .buttons a {
+    text-align: center;
+  }
+
+  .cards {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* Extra refinements for small mobile screens */
+@media (max-width: 600px) {
+  header {
+    padding: 16px 12px;
+  }
+
+  nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  nav a {
+    padding: 6px 2px;
+    font-size: 13px;
+  }
+
+  .hero {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  section {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .card {
+    padding: 18px;
+  }
+
+  .card img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+  }
+
+  .btn {
+    max-width: 100%;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -72,9 +213,10 @@ footer{text-align:center;padding:25px;border-top:1px solid #493c28;color:#aeb5bf
 <a href="#about">من أنا</a>
 <a href="#interests">اهتماماتي</a>
 <a href="#experience">خبراتي</a>
-  <a href="#cv">السيرة الذاتية CV</a>
+<a href="#cv">السيرة الذاتية CV</a>
 <a href="#articles">مقالات وأفكار</a>
-  <a href="#quotes">ومضات فكرية</a>
+<a href="#quotes">ومضات فكرية</a>
+<a href="#gallery">معرض الصور</a>
 <a href="#contact">تواصل</a>
 </nav>
 
